@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BirthdayVerse ❤️</title>
+    <meta name="description"
+    content="A magical interactive birthday surprise website built with HTML, CSS and JavaScript.">
+
+    <meta name="theme-color" content="#8B5CF6">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/icons/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gift.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+        LOADING SCREEN
+=========================== -->
+
+<div id="loading-screen">
+
+    <div class="terminal">
+
+        <h1>BirthdayVerse OS</h1>
+
+        <p id="loading-text">
+            Initializing...
+        </p>
+
+        <div class="progress-container">
+
+            <div id="progress-bar"></div>
+
+        </div>
+
+        <p id="loading-status">
+            Loading Memories...
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+        MAIN APP
+=========================== -->
+
+<main id="app" style="display:none;">
+
+    <!-- Background -->
+    <canvas id="sky"></canvas>
+
+    <!-- ===========================
+            HERO SECTION
+    =========================== -->
+
+    <section class="hero">
+
+        <h1 id="birthday-title">
+            🎉 Happy Birthday 🎉
+        </h1>
+
+        <h2 id="friend-name">
+            ❤️ Best Friend ❤️
+        </h2>
+
+        <p class="subtitle">
+            Every star in the sky is celebrating your special day...
+        </p>
+
+        <button id="start-btn">
+            Open Your Surprise 🎁
+        </button>
+
+    </section>
+
+    <!-- ===========================
+            GIFT SECTION
+    =========================== -->
+
+    <section id="gift-section" class="hidden">
+
+        <div id="gift-wrapper">
+
+            <div id="gift-box">
+
+                <!-- Lid -->
+
+                <div class="gift-lid">
+
+                    <div class="gift-bow">
+
+                        <div class="bow-left"></div>
+
+                        <div class="bow-center"></div>
+
+                        <div class="bow-right"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- Body -->
+
+                <div class="gift-body"></div>
+
+                <div class="gift-ribbon-vertical"></div>
+
+                <div class="gift-ribbon-horizontal"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Birthday Card -->
+
+        <div id="birthday-card">
+
+            <h1>
+                🎂 Happy Birthday 🎂
+            </h1>
+
+            <h2 id="card-name"></h2>
+
+            <p id="typewriter"></p>
+
+            <button id="continue-btn">
+                View Memories 📸
+            </button>
+
+        </div>
+
+        <!-- Floating Effects -->
+
+        <div id="effects-container"></div>
+
+    </section>
+
+
+    <!-- ===========================
+            GALLERY SECTION
+    =========================== -->
+
+    <section id="gallery-section" style="display:none;">
+
+        <h1>📸 Beautiful Memories</h1>
+
+        <div class="gallery">
+
+            <img src="assets/images/1.jpg" loading="lazy" alt="Memory 1">
+            <img src="assets/images/2.jpg" loading="lazy" alt="Memory 2">
+            <img src="assets/images/3.jpg" loading="lazy" alt="Memory 3">
+            <img src="assets/images/4.jpg" loading="lazy" alt="Memory 4">
+            <img src="assets/images/5.jpg" loading="lazy" alt="Memory 5">
+            <img src="assets/images/6.jpg" loading="lazy" alt="Memory 6">
+
+        </div>
+
+        <button id="fireworks-btn">
+            Open Secret Letter 💌
+        </button>
+
+    </section>
+
+    <!-- ===========================
+            LIGHTBOX
+    =========================== -->
+
+    <div id="lightbox">
+
+        <span id="close-lightbox">&times;</span>
+
+        <img id="lightbox-img" src="" alt="Memory Preview">
+
+    </div>
+
+    <!-- ===========================
+            LETTER SECTION
+    =========================== -->
+
+    <section id="letter-section" style="display:none;">
+
+        <div class="envelope">
+
+            <div class="letter">
+
+                <h1>💌 A Letter For You</h1>
+
+                <p id="letter-text">
+
+                    Dear ❤️,
+
+                    <br><br>
+
+                    Happy Birthday!
+
+                    <br><br>
+
+                    Today is all about celebrating you.
+
+                    <br><br>
+
+                    Thank you for filling life with happiness,
+                    laughter and unforgettable memories.
+
+                    <br><br>
+
+                    May all your dreams come true,
+                    may success always follow you,
+                    and may you always keep smiling.
+
+                    <br><br>
+
+                    No matter where life takes us,
+                    you'll always be someone very special.
+
+                    <br><br>
+
+                    Wishing you endless happiness,
+                    good health,
+                    lots of love,
+                    and a lifetime of beautiful moments.
+
+                    <br><br>
+
+                    🎂 Happy Birthday Once Again 🎂
+
+                    <br><br>
+
+                    ❤️ Yours Truly ❤️
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+            FINAL SCREEN
+    =========================== -->
+
+    <section id="final-section" style="display:none;">
+
+        <div class="final-content">
+
+            <h1>
+                🎉 Happy Birthday 🎉
+            </h1>
+
+            <h2 id="final-name"></h2>
+
+            <p>
+
+                Thank you for taking this little journey.
+
+                <br><br>
+
+                May your life always be filled with:
+
+                <br>✨ Happiness
+                <br>❤️ Love
+                <br>🌟 Success
+                <br>🎂 Beautiful Memories
+
+                <br><br>
+
+                Have an amazing year ahead!
+
+            </p>
+
+            <button id="restart-btn">
+
+                🔄 Watch Again
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+            BACKGROUND MUSIC
+    =========================== -->
+
+    <audio id="bg-music" loop>
+        <source src="assets/music/happy-birthday.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- ===========================
+            FIREWORKS CANVAS
+    =========================== -->
+
+    <canvas id="fireworks-canvas"></canvas>
+
+</main>
+
+<!-- ===========================
+        JAVASCRIPT FILES
+=========================== -->
+
+<script src="js/config.js"></script>
+<script src="js/loader.js"></script>
+
+<script src="js/typewriter.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/sounds.js"></script>
+<script src="js/music.js"></script>
+<script src="js/gift.js"></script>
+<script src="js/fireworks.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/final.js"></script>
+<script src="js/shootingStars.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/petals.js"></script>
+<script src="js/animation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+/* =====================================================
+   BirthdayVerse Responsive Design
+===================================================== */
+
+/* ==========================
+   Tablets
+========================== */
+
+@media (max-width: 992px) {
+
+    .hero h1{
+        font-size:56px;
+    }
+
+    #friend-name{
+        font-size:26px;
+    }
+
+    .subtitle{
+        font-size:18px;
+        padding:0 20px;
+    }
+
+    .terminal{
+        width:90%;
+        padding:30px;
+    }
+
+    #gift-box{
+        transform:scale(.9);
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .letter{
+        width:95%;
+    }
+
+    .final-content{
+        width:90%;
+        padding:35px;
+    }
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:768px){
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    #friend-name{
+        font-size:22px;
+    }
+
+    .subtitle{
+        font-size:16px;
+        padding:0 20px;
+    }
+
+    .terminal{
+        width:95%;
+        padding:25px;
+    }
+
+    .terminal h1{
+        font-size:28px;
+    }
+
+    #gift-box{
+        transform:scale(.8);
+    }
+
+    #birthday-card{
+        width:95%;
+        padding:25px;
+    }
+
+    #birthday-card h1{
+        font-size:30px;
+    }
+
+    #birthday-card h2{
+        font-size:24px;
+    }
+
+    #typewriter{
+        font-size:16px;
+        min-height:180px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .gallery img{
+        height:240px;
+    }
+
+    .envelope{
+        width:95%;
+        height:260px;
+    }
+
+    .letter{
+        padding:18px;
+        font-size:15px;
+    }
+
+    .final-content{
+        width:92%;
+        padding:30px;
+    }
+
+    .final-content h1{
+        font-size:2.5rem;
+    }
+
+    .final-content h2{
+        font-size:1.6rem;
+    }
+
+    .final-content p{
+        font-size:1rem;
+    }
+
+    button{
+        width:90%;
+        max-width:320px;
+    }
+
+    #lightbox img{
+        max-width:95%;
+        max-height:80%;
+    }
+
+    #close-lightbox{
+        top:20px;
+        right:20px;
+        font-size:40px;
+    }
+
+}
+
+/* ==========================
+   Small Phones
+========================== */
+
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    #friend-name{
+        font-size:18px;
+    }
+
+    .subtitle{
+        font-size:15px;
+    }
+
+    .terminal{
+        padding:20px;
+    }
+
+    .terminal h1{
+        font-size:24px;
+    }
+
+    #gift-box{
+        transform:scale(.7);
+    }
+
+    #birthday-card{
+        padding:20px;
+    }
+
+    #birthday-card h1{
+        font-size:24px;
+    }
+
+    #birthday-card h2{
+        font-size:20px;
+    }
+
+    .gallery img{
+        height:200px;
+    }
+
+    .envelope{
+        height:220px;
+    }
+
+    .letter{
+        font-size:14px;
+    }
+
+    .final-content h1{
+        font-size:2rem;
+    }
+
+    .final-content h2{
+        font-size:1.3rem;
+    }
+
+    .final-content p{
+        font-size:.95rem;
+    }
+
+    button{
+        width:95%;
+        padding:14px 20px;
+        font-size:16px;
+    }
+
+}
