@@ -1,5 +1,5 @@
 const birthdayData = {
-    name: "Your Best Friend",
-    nickname: "Bestie",
+    name: "Shraddha",
+    nickname: "Kittu",
     favoriteColor: "#EC4899"
 };
