@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             startBalloons();
 
-            if(typeof birthdayData !== "undefined"){
-                cardName.textContent = "❤️ " + birthdayData.name + " ❤️";
+            if (typeof birthdayData !== "undefined") {
+            cardName.textContent = `❤️ ${birthdayData.name} (${birthdayData.nickname}) ❤️`;
             }
 
             createConfetti();
